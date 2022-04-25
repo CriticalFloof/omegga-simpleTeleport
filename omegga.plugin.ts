@@ -51,7 +51,7 @@ export default class Plugin implements OmeggaPlugin<Config, Storage> {
     });
     
 
-    return { registeredCommands: ['getposition'] };
+    return { registeredCommands: ['getposition','helpsimpleteleport'] };
   }
 
   async stop() {
