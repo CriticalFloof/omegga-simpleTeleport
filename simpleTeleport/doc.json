@@ -1,0 +1,14 @@
+{
+  "name": "simpleTeleport",
+  "description": "Allows users to set up teleportation via interact component using Print To Console. Type /helpsimpleteleport for more info)",
+  "author": "CriticalFloof",
+  "config": {},
+  "commands": [
+    {
+      "name": "/getposition",
+      "description": "Displays your location",
+      "example": "/getposition",
+      "args": []
+    }
+  ]
+}
