@@ -11,7 +11,7 @@ A typed safe plugin for [omegga](https://github.com/brickadia-community/omegga).
 
 ## Usage
 
-Once Installed, to use the plugin, type teleport:[X],[Y],[Z] in the Print To Console textbox
+Once Installed, to use the plugin, type teleport:[X],[Y],[Z] in the 'Print To Console' textbox.
 To use relative teleportation on any given axis, add an ~ before the number
 
 Commands:
