@@ -24,7 +24,7 @@ export default class Plugin implements OmeggaPlugin<Config, Storage> {
       To use relative teleportation on any given axis, add an ~ before the number`)
     })
 
-
+    //
     .on('cmd:getposition', async name => {
       const playerPosition =  await Omegga.getPlayer(name).getPosition()
       const playerX = playerPosition[0].toFixed(0)
@@ -55,11 +55,5 @@ export default class Plugin implements OmeggaPlugin<Config, Storage> {
   }
 
   async stop() {
-    Omegga
-    .removeAllListeners('cmd:getposition')
-    .removeAllListeners('cmd:helpsimpleteleport')
-    .removeAllListeners('interact')
-    .removeAllListeners('event:tp');
-    // Anything that needs to be cleaned up...
   }
 }
