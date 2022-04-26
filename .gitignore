@@ -1,3 +1,4 @@
 .build/
 omegga.d.ts
+git rm --cached omegga.d.ts
 disabled.omegga 
