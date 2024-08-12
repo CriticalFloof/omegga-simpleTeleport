@@ -21,7 +21,7 @@ export default class Plugin implements OmeggaPlugin<Config, Storage> {
     // store is the reference to a plugin's database, this is where you'll be storing variables that you want to save and read across plugin sessions.
     // I HIGHLY encourage that you do not write to this frequently, using the store database writes to a file on your harddrive,
     // that is how data can saved across plugin sessions, however this means it is order of magnitudes slower than using variables stored in RAM directly.
-    // If you desire to write to the store database frequently, A great option is to create an autosave system and save the data on a timer.
+    // If you desire to write to the store database frequently however, A better option is to use variables and save the variables on an 'autosave' timer instead.
     this.store = store;
   }
 
