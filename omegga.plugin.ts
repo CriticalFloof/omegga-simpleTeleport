@@ -12,16 +12,17 @@ export default class Plugin implements OmeggaPlugin<Config, Storage> {
   store: PS<Storage>;
 
   constructor(omegga: OL, config: PC<Config>, store: PS<Storage>) {
-    // omegga is a reference which usage is the main method to interact with the Omegga wrapper and Brickadia server.
-    // You also have access to the Omegga global variable for ease of access.
+    // omegga is the main way to interact with the Omegga wrapper and Brickadia server.
+    // You also have access to the 'Omegga' global variable for ease of access from any TS file.
     this.omegga = omegga;
-    // config is the reference where values set by the Web UI are stored, you can define configs for plugin managers to tweak in the doc.json file (refer to Omegga documentation for usage)
-    // For this plugin, we dont need to use this.
+    // config is a reference where data set by the Web UI is stored, you can define configs for plugin managers to tweak in the doc.json file (refer to Omegga documentation for usage)
+    // For this plugin, we dont use this.
     this.config = config;
-    // store is the reference to a plugin's database, this is where you'll be storing variables that you want to save and read across plugin sessions.
-    // I HIGHLY encourage that you do not write to this frequently, using the store database writes to a file on your harddrive,
-    // that is how data can saved across plugin sessions, however this means it is order of magnitudes slower than using variables stored in RAM directly.
-    // If you desire to write to the store database frequently however, A better option is to use variables and save the variables on an 'autosave' timer instead.
+    // store is a reference to a plugin's database, this is where you'll be storing variables that you want to save and read across plugin sessions.
+    // I HIGHLY encourage that you do not write to this frequently, using the store database writes data to a file on your harddrive,
+    // which is how data is saved across plugin sessions, however this means it is VERY slow and you should stick to variables stored in RAM directly whenever possible.
+    // If you desire to write to the store database frequently however, A better option is to use variables and save them to the store with the help of an 'autosave' timer instead.
+    // For this plugin, we dont use this.
     this.store = store;
   }
 
