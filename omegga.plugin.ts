@@ -40,7 +40,7 @@ export default class Plugin implements OmeggaPlugin<Config, Storage> {
     .on('cmd:getposition', async name => {
       // This event demonstrates how you could get the player's position in responce to a player sending a command.
       // A good reason to do this is because currently, brickadia's vanilla command '/gettransform' is inaccessible to non-admin players.
-      // Helper commands like these can improve a users experience with using your plugin.
+      // Helper commands like these can improve a user's experience with using your plugin.
       
       const playerPosition =  await Omegga.getPlayer(name).getPosition()
       const playerX = playerPosition[0].toFixed(0)
